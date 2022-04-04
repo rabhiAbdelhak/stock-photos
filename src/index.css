@@ -1,13 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+:root {
+  --main-transition: 0.5s;
+  --main-color: rgb(228, 22, 56);
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(241, 226, 229);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.search {
+  padding: 50px 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.search form {
+ width: 70%;
+ background: white;
+ display: flex;
+ border-bottom: 2px solid rgba(236, 10, 48, 0.486);
+ border-radius: 5px;
+ overflow:hidden;
+}
+
+.search input{
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border:none;
+  font-weight: 300;
+  font-size:17px;
+  
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.search form button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border:none;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  font-size: 20px;
+
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px , 1fr));
+  gap: 20px;
+  padding: 80px;
+}
+
+.photos .photo_container {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photos .photo_container img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.photos .photo_container .info {
+  position: absolute;
+  bottom: -80px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: rgba(0, 0, 0, 0.459);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  transition: var(--main-transition);
+}
+
+.photos .photo_container:hover .info{
+  bottom: 0;
+}
+
+.photos .photo_container .name_stats h2{
+  font-size: 19px;
+  text-transform: capitalize;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  
+}
+
+.photos .photo_container .name_stats p {
+  color: #777;
+  font-weight: bold;
+  font-size: 15px;
+}
+.photos .photo_container .name_stats p span{
+  font-size: 14px;
+  color: var(--main-color);
+  margin-right: 5px;
+}
+
+.btn_portfolio {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn_portfolio img {
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  color: var(--main-color);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+
+
