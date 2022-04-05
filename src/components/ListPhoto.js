@@ -1,5 +1,4 @@
 import React from "react";
-import { useFetchData } from "../Hooks/FetchData";
 import Loading from "./Loading";
 import Photo from "./Photo";
 
